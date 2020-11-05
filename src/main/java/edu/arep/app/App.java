@@ -9,6 +9,7 @@ public class App {
     public static void main( String[] args ) {
         System.out.println( "Hello World!" );
         staticFiles.location("/public");
+        port(getPort());
         get("/hello/:name", (request, response) -> {
             int n = Integer.parseInt(request.params(":name"));
             Fibonacci fib = new Fibonacci();
@@ -20,6 +21,6 @@ public class App {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }
-        return 4567;
+        return 8080;
     }
 }
