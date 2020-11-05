@@ -9,13 +9,44 @@ La aplicacion consiste en el calculo de la secuencia de fibonacci al que corresp
 
 * se comprueba que reiniciando la maquina la aplicación este corriendo
 
+![img](img/exec.png)
+
 ![img](img/fibo.png)
 
-2. Construya un prototipo de la solución.
-3. Depliegue la solución en AWS en EC2.
-4. Configure la máquina para que inicie los servicios una vez se reinicia el servidor.
-5. Cree un AMI a partir de esta máquina.
-6. Despliegue la solución en un grupo de autoescalamiento.
-7. Cargue la solución con muchas solicitudes para generar alta carga en el servidor.
-8. Monitoree y verifique que se creen más instancias.
-9. Documente el tutorial en GitHub con código, texto, e imágenes.
+* creamos una imagen de la instancia
+
+![img](img/img.png)
+
+![img](img/img-conf.png)
+
+![img](img/ami.png)
+
+* luego creamos y configuramos una plantilla de lanzamiento
+
+![img](img/plantilla.png)
+
+![img](img/plantilla1.png)
+
+* por ultimo cremos un grupo de autoscaling con una politica por uso de cpu y las maximas instancias que se pueden generar
+
+![img](img/plantilla2.png)
+
+![img](img/size.png)
+
+![img](img/politica.png)
+
+## Pruebas
+
+* A continuación se puede ver que el consumo de la cpu es alto por lo que se crean las demas instancias que se pueden ver en el video.
+
+![img](img/politica.png)
+
+[video de prueba](https://youtu.be/dUHzC8C6Apw)
+
+## Autor
+
+Edwin Yesid Rodriguez Maldonado
+
+## Licencia
+
+Este proyecto esta bajo la licencia Gnu
